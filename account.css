@@ -1,0 +1,604 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #1c2333;
+}
+
+button {
+    font: inherit;
+}
+
+.topbar {
+    height: 76px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.university {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.university-logo {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #5b6cff, #9368ff);
+
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.university h2 {
+    font-size: 16px;
+}
+
+.university span {
+    display: block;
+    margin-top: 3px;
+
+    color: #9299a8;
+    font-size: 11px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-button {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+
+    background: white;
+    cursor: pointer;
+}
+
+.mini-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mini-avatar {
+    width: 39px;
+    height: 39px;
+
+    border-radius: 12px;
+
+    background: #eef0ff;
+    color: #6674ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mini-profile strong {
+    display: block;
+    font-size: 12px;
+}
+
+.mini-profile span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9299a8;
+    font-size: 10px;
+}
+
+.page {
+    display: flex;
+    min-height: calc(100vh - 76px);
+}
+
+.navigation {
+    width: 230px;
+
+    padding: 28px 16px;
+
+    background: white;
+    border-right: 1px solid #e5e7eb;
+}
+
+.navigation-title {
+    margin: 0 12px 12px;
+
+    color: #a0a7b5;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.nav-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 11px 13px;
+    margin-bottom: 4px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #626b7c;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: #f4f5ff;
+    color: #5966e8;
+}
+
+.nav-item.active {
+    background: #eef0ff;
+    color: #5966e8;
+    font-weight: 600;
+}
+
+.content {
+    flex: 1;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 36px;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.date-label {
+    margin-bottom: 8px;
+
+    color: #6674ff;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.welcome-section h1 {
+    font-size: 27px;
+}
+
+.welcome-section > div > p:last-child {
+    margin-top: 7px;
+
+    color: #858d9c;
+    font-size: 13px;
+}
+
+.student-badge {
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #eef0ff;
+    color: #5966e8;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.student-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 25px;
+
+    background: linear-gradient(135deg, #171f32, #252c46);
+
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow: 0 12px 30px rgba(30, 40, 80, 0.12);
+}
+
+.big-avatar {
+    min-width: 75px;
+    width: 75px;
+    height: 75px;
+
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #6674ff, #9b6cff);
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.student-info {
+    flex: 1;
+}
+
+.student-info h2 {
+    font-size: 20px;
+}
+
+.student-info > p {
+    margin-top: 5px;
+
+    color: #bbc2d2;
+    font-size: 13px;
+}
+
+.student-details {
+    display: flex;
+    gap: 50px;
+
+    margin-top: 20px;
+}
+
+.student-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.student-details span {
+    color: #929aab;
+    font-size: 10px;
+}
+
+.student-details strong {
+    font-size: 12px;
+}
+
+.active-status {
+    color: #69df9b;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #e7eaf0;
+    border-radius: 16px;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f3ff;
+
+    border-radius: 13px;
+
+    font-size: 19px;
+}
+
+.stat-card span {
+    display: block;
+
+    color: #818a99;
+    font-size: 11px;
+}
+
+.stat-card strong {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 23px;
+}
+
+.stat-card p {
+    margin-top: 2px;
+
+    color: #a0a7b3;
+    font-size: 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+.panel {
+    padding: 22px;
+
+    background: white;
+
+    border: 1px solid #e7eaf0;
+    border-radius: 17px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.panel-header h3 {
+    font-size: 15px;
+}
+
+.panel-header p {
+    margin-top: 4px;
+
+    color: #989fac;
+    font-size: 10px;
+}
+
+.panel-header button {
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #f0f2ff;
+    color: #6674ff;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+.grade-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eef0f3;
+}
+
+.grade-row:last-child {
+    border-bottom: none;
+}
+
+.grade-row strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.grade-row span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #a0a6b0;
+    font-size: 10px;
+}
+
+.grade {
+    min-width: 40px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.grade.excellent {
+    background: #eaf9ef;
+    color: #29a75c;
+}
+
+.grade.good {
+    background: #fff5dc;
+    color: #c88b16;
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eef0f3;
+}
+
+.lesson:last-child {
+    border-bottom: none;
+}
+
+.lesson-time {
+    min-width: 52px;
+
+    padding: 7px;
+
+    background: #eef0ff;
+
+    border-radius: 9px;
+
+    color: #5966e8;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.lesson strong {
+    font-size: 12px;
+}
+
+.lesson p {
+    margin-top: 4px;
+
+    color: #9aa1ae;
+    font-size: 10px;
+}
+
+.finlake-button {
+    position: fixed;
+
+    right: 28px;
+    bottom: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 15px 9px 9px;
+
+    border-radius: 18px;
+
+    background: #111827;
+
+    color: white;
+
+    text-decoration: none;
+
+    box-shadow: 0 12px 35px rgba(17, 24, 39, 0.28);
+
+    z-index: 100;
+
+    transition: 0.2s;
+}
+
+.finlake-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 16px 40px rgba(17, 24, 39, 0.35);
+}
+
+.finlake-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #6674ff, #9b6cff);
+
+    font-size: 22px;
+}
+
+.finlake-text strong {
+    display: block;
+
+    font-size: 12px;
+}
+
+.finlake-text span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9ca3af;
+
+    font-size: 9px;
+}
+
+@media (max-width: 900px) {
+    .navigation {
+        display: none;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .student-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .mini-profile {
+        display: none;
+    }
+
+    .finlake-text {
+        display: none;
+    }
+
+    .finlake-button {
+        padding: 8px;
+    }
+}
