@@ -1,0 +1,59 @@
+services:
+  db:
+    image: postgres:16
+    container_name: finlake-db
+
+    environment:
+      POSTGRES_DB: university
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./bdfin.sql:/docker-entrypoint-initdb.d/bdfin.sql:ro
+
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d university" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: .
+    container_name: finlake-backend
+
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: university
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      YANDEX_API_KEY: ${YANDEX_API_KEY}
+      YANDEX_FOLDER_ID: ${YANDEX_FOLDER_ID}
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: nginx:alpine
+    container_name: finlake-frontend
+
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
