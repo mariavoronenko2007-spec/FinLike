@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #ffffff;
+}
+
+
+/* HEADER */
+
+.header {
+    height: 82px;
+    padding: 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #111827;
+    border-bottom: 1px solid #263244;
+}
+
+
+.university-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.logo {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+.university-logo h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.university-logo span {
+    display: block;
+    margin-top: 3px;
+
+    font-size: 12px;
+    color: #8e9aab;
+}
+
+
+.account-button {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid #334155;
+    border-radius: 50%;
+
+    background: #1a2332;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.account-button:hover {
+    background: #263244;
+    transform: translateY(-1px);
+}
+
+
+/* MAIN */
+
+.main {
+    min-height: calc(100vh - 82px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 10%;
+}
+
+
+.hero {
+    width: 100%;
+}
+
+
+.hero-content {
+    max-width: 760px;
+}
+
+
+.subtitle {
+    margin-bottom: 18px;
+
+    color: #8fa6c4;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.hero h1 {
+    max-width: 750px;
+
+    font-size: 54px;
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+}
+
+
+.description {
+    max-width: 620px;
+
+    margin-top: 26px;
+
+    color: #9ca9ba;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* FINLAKE BUTTON */
+
+.finlake-button {
+    position: fixed;
+
+    right: 34px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 16px 10px 10px;
+
+    border: 1px solid #334155;
+    border-radius: 18px;
+
+    background: #172033;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+
+    transition: 0.2s;
+}
+
+
+.finlake-button:hover {
+    transform: translateY(-3px);
+    background: #202c40;
+}
+
+
+.finlake-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-size: 21px;
+}
+
+
+.finlake-button span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* LOGIN MODAL */
+
+.modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(4, 8, 16, 0.72);
+
+    backdrop-filter: blur(6px);
+
+    z-index: 1000;
+}
+
+
+.modal.active {
+    display: flex;
+}
+
+
+.modal-window {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 38px;
+
+    border: 1px solid #2d394b;
+    border-radius: 20px;
+
+    background: #111827;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+
+.close-button {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    border: none;
+    background: transparent;
+
+    color: #8491a3;
+
+    font-size: 26px;
+
+    cursor: pointer;
+}
+
+
+.close-button:hover {
+    color: #ffffff;
+}
+
+
+.modal-window h2 {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.modal-description {
+    margin-bottom: 28px;
+
+    color: #8e9aab;
+
+    font-size: 14px;
+}
+
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#loginForm label {
+    margin-bottom: 7px;
+
+    color: #c7ced8;
+
+    font-size: 13px;
+}
+
+
+#loginForm input {
+    width: 100%;
+
+    margin-bottom: 18px;
+    padding: 13px 14px;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #0b1220;
+    color: #ffffff;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+#loginForm input::placeholder {
+    color: #596579;
+}
+
+
+#loginForm input:focus {
+    border-color: #718096;
+    background: #0d1626;
+}
+
+
+.error-message {
+    min-height: 18px;
+
+    margin-top: -6px;
+    margin-bottom: 10px;
+
+    color: #ef8c8c;
+
+    font-size: 12px;
+}
+
+
+.login-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.login-button:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+
+    .main {
+        padding: 50px 24px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .description {
+        font-size: 16px;
+    }
+
+
+    .finlake-button {
+        right: 20px;
+        bottom: 20px;
+    }
+
+
+    .finlake-button span {
+        display: none;
+    }
+
+
+    .finlake-button {
+        padding: 8px;
+        border-radius: 16px;
+    }
+
+
+    .modal-window {
+        padding: 32px 24px;
+    }
+}
