@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Личный кабинет | University Portal</title>
+
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <a href="home.html" class="university">
+
+        <div class="university-logo">
+            U
+        </div>
+
+        <div>
+            <h2>University Portal</h2>
+            <span id="headerRole">Личный кабинет</span>
+        </div>
+
+    </a>
+
+    <div class="topbar-right">
+
+        <div class="mini-profile">
+
+            <div class="mini-avatar" id="miniAvatar">
+                U
+            </div>
+
+            <div>
+                <strong id="miniName">
+                    Пользователь
+                </strong>
+
+                <span id="miniRole">
+                    Личный кабинет
+                </span>
+            </div>
+
+        </div>
+
+        <button
+            class="logout-button"
+            id="logoutButton"
+            title="Выйти"
+        >
+            Выйти
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="content">
+
+    <section class="welcome-section">
+
+        <div>
+
+            <p class="date-label">
+                ЛИЧНЫЙ КАБИНЕТ
+            </p>
+
+            <h1 id="welcomeTitle">
+                Добро пожаловать!
+            </h1>
+
+            <p id="welcomeText">
+                Загружаем информацию...
+            </p>
+
+        </div>
+
+        <div class="role-badge" id="roleBadge">
+            Пользователь
+        </div>
+
+    </section>
+
+
+    <section class="profile-card">
+
+        <div class="big-avatar" id="bigAvatar">
+            U
+        </div>
+
+        <div class="profile-info">
+
+            <h2 id="fullName">
+                Загрузка...
+            </h2>
+
+            <p id="profileSubtitle">
+                University Portal
+            </p>
+
+            <div
+                class="profile-details"
+                id="profileDetails"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        class="stats"
+        id="stats"
+    ></section>
+
+
+    <div class="dashboard-grid">
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h3 id="leftPanelTitle">
+                        Информация
+                    </h3>
+
+                    <p id="leftPanelSubtitle">
+                        Актуальные данные
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="leftPanelContent"></div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h3 id="rightPanelTitle">
+                        Дополнительно
+                    </h3>
+
+                    <p id="rightPanelSubtitle">
+                        Основная информация
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="rightPanelContent"></div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<a
+    href="index.html"
+    class="finlake-button"
+    title="Открыть FinLake"
+>
+
+    <div class="finlake-icon">
+        ✦
+    </div>
+
+    <div class="finlake-text">
+        <strong>FinLake</strong>
+        <span>AI-помощник</span>
+    </div>
+
+</a>
+
+
+<script src="account.js"></script>
+
+</body>
+
+</html>

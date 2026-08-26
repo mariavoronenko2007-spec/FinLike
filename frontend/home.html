@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="university-logo">
+
+        <div class="logo">
+            U
+        </div>
+
+        <div>
+            <h2>University</h2>
+            <span>Информационная система вуза</span>
+        </div>
+
+    </div>
+
+
+    <button class="account-button" id="accountButton">
+        👤
+    </button>
+
+</header>
+
+
+<main class="main">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="subtitle">
+                UNIVERSITY PORTAL
+            </p>
+
+            <h1>
+                Единое цифровое пространство университета
+            </h1>
+
+            <p class="description">
+                Учебная информация, расписание, успеваемость
+                и интеллектуальный помощник FinLake в одном сервисе.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<a href="index.html" class="finlake-button">
+
+    <div class="finlake-icon">
+        ✦
+    </div>
+
+    <span>
+        FinLake
+    </span>
+
+</a>
+
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-window">
+
+        <button class="close-button" id="closeButton">
+            ×
+        </button>
+
+
+        <h2>
+            Вход в личный кабинет
+        </h2>
+
+        <p class="modal-description">
+            Введите логин и пароль
+        </p>
+
+
+        <form id="loginForm">
+
+            <label for="login">
+                Логин
+            </label>
+
+            <input
+                type="text"
+                id="login"
+                placeholder="student-0001"
+                autocomplete="username"
+                required
+            >
+
+            <p
+                class="error-message"
+                id="errorMessage"
+            ></p>
+
+
+            <button
+                class="login-button"
+                type="submit"
+            >
+                Войти
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="home.js"></script>
+
+</body>
+
+</html>
